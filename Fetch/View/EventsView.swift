@@ -29,6 +29,27 @@ struct EventsView: View {
                     .shadow(color: Color.black.opacity(0.06), radius: 5, x: -5, y: -5)
                 }
                 .padding()
+                
+                if let events = homeData.fetchedEvents {
+                    if events.isEmpty {
+                        Text("No Results Found")
+                            .padding(.top, 20)
+                    }
+                    else {
+                        //Display Results
+                        ForEach(events) { data in
+                            Text(data.title)
+                            Text(String(data.id))
+                        }
+                    }
+                }
+                else {
+                    if homeData.searchQuery != "" {
+                        //Loading View
+                        ProgressView()
+                            .padding(.top, 20)
+                    }
+                }
             })
             .navigationTitle("Events")
         }

@@ -11,10 +11,12 @@ import Combine
 class HomeViewModel: ObservableObject {
     @Published var searchQuery = ""
     
-    //Combine Framework Search Bar
-    
+    //Combine framework search bar
     //Cancel search publisher when needed
     var searchCancellable: AnyCancellable? = nil
+    
+    //Fetched Data
+    @Published var fetchedEvents: [Event]? = nil
     
     init() {
         searchCancellable = $searchQuery
@@ -24,12 +26,21 @@ class HomeViewModel: ObservableObject {
             .sink(receiveValue: { str in
                 if str == "" {
                     //Reset Data
+                    self.fetchedEvents = nil
                 }
                 else {
-                    //Search Data
-                    print(str)
+                    self.searchEvents()
                 }
             })
     }
 
+    func searchEvents() {
+        DataHandler.shared.fetchEvents(with: searchQuery) { [unowned self] (result, events) in
+            if let res = result {
+                self.fetchedEvents = events
+                print(res ? "Fetch Success" : "Fetch Error")
+            }
+        }
+    }
+    
 }
