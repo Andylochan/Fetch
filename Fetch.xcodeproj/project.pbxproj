@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		14387A032671526D00E9A3B1 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14387A022671526D00E9A3B1 /* Keys.swift */; };
+		14387A0C267153D100E9A3B1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14387A0B267153D100E9A3B1 /* Home.swift */; };
+		14387A10267155CC00E9A3B1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14387A0F267155CC00E9A3B1 /* HomeViewModel.swift */; };
+		14387A132671565300E9A3B1 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14387A122671565300E9A3B1 /* EventsView.swift */; };
 		144512E9267151300082900A /* FetchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144512E8267151300082900A /* FetchApp.swift */; };
 		144512EB267151300082900A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144512EA267151300082900A /* ContentView.swift */; };
 		144512ED267151300082900A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 144512EC267151300082900A /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 
 /* Begin PBXFileReference section */
 		14387A022671526D00E9A3B1 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		14387A0B267153D100E9A3B1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		14387A0F267155CC00E9A3B1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		14387A122671565300E9A3B1 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		144512E5267151300082900A /* Fetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fetch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		144512E8267151300082900A /* FetchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchApp.swift; sourceTree = "<group>"; };
 		144512EA267151300082900A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +54,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		14387A082671533100E9A3B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14387A0B267153D100E9A3B1 /* Home.swift */,
+				14387A122671565300E9A3B1 /* EventsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		14387A092671533600E9A3B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14387A0A2671533A00E9A3B1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				14387A0F267155CC00E9A3B1 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		144512DC267151300082900A = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +99,9 @@
 		144512E7267151300082900A /* Fetch */ = {
 			isa = PBXGroup;
 			children = (
+				14387A0A2671533A00E9A3B1 /* ViewModel */,
+				14387A092671533600E9A3B1 /* Model */,
+				14387A082671533100E9A3B1 /* View */,
 				144512E8267151300082900A /* FetchApp.swift */,
 				144512EA267151300082900A /* ContentView.swift */,
 				144512EC267151300082900A /* Assets.xcassets */,
@@ -211,7 +244,10 @@
 			files = (
 				144512EB267151300082900A /* ContentView.swift in Sources */,
 				14387A032671526D00E9A3B1 /* Keys.swift in Sources */,
+				14387A0C267153D100E9A3B1 /* Home.swift in Sources */,
+				14387A10267155CC00E9A3B1 /* HomeViewModel.swift in Sources */,
 				144512E9267151300082900A /* FetchApp.swift in Sources */,
+				14387A132671565300E9A3B1 /* EventsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
