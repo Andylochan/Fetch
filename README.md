@@ -19,6 +19,7 @@ Please open and run the ```Fetch.xcworkspace``` file to view the project.
 
 ## App Screenshots
 
+<img src="imgs/ss1.png" width="200" height="350">
 ![HomeView](/imgs/ss1.png?raw=true "HomeView")
 ![DetailView-Liked](/imgs/ss2.png?raw=true "DetailView-Liked")
 ![DetailView-Unliked](/imgs/ss3.png?raw=true "DetailView-Unliked")
