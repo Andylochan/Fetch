@@ -19,9 +19,9 @@ Please open and run the ```Fetch.xcworkspace``` file to view the project.
 
 ## App Screenshots
 
-![HomeView](/imgs/ss1.jpg?raw=true "HomeView")
-![DetailView-Liked](/imgs/ss2.jpg?raw=true "DetailView-Liked")
-![DetailView-Unliked](/imgs/ss3.jpg?raw=true "DetailView-Unliked")
+![HomeView](/imgs/ss1.png?raw=true "HomeView")
+![DetailView-Liked](/imgs/ss2.png?raw=true "DetailView-Liked")
+![DetailView-Unliked](/imgs/ss3.png?raw=true "DetailView-Unliked")
 
 ## Dependency Manager
 
