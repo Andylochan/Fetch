@@ -37,3 +37,8 @@ Please open and run the ```Fetch.xcworkspace``` file to view the project.
 sudo arch -x86_64 gem install ffi
 arch -x86_64 pod install
 ```
+
+### Support 
+
+- Built using Xcode 12.4
+- Tested on iOS 14.0
