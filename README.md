@@ -1,7 +1,6 @@
 # Fetch (FetchRewards)
 
-A SwiftUI app that displays events from the SeatGeek API (https://
-platform.seatgeek.com/)
+A SwiftUI app that displays events from the SeatGeek API (https://platform.seatgeek.com/)
 
 ## How to use
 Please open and run the ```Fetch.xcworkspace``` file to view the project. 
