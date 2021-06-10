@@ -16,6 +16,7 @@ Please open and run the ```Fetch.xcworkspace``` file to view the project.
 - Events can be favorited/unfavorited and are saved locally to the device.
 - Event ID's are stored in UserDefaults for data persistence.
 - UTC to EST Date Formatter.
+- Custom app icon made in Sketch. 
 
 ## App Screenshots
 
