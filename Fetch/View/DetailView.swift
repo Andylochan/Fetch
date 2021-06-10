@@ -29,12 +29,13 @@ struct DetailView: View {
                     .padding(.top, 10)
                 
                 HStack(spacing: 8) {
-                    VStack(spacing: 8) {
-                        Text(event.dateTime)
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(homeData.formatDate(date: event.dateTime))
                             .font(.title3)
                             .fontWeight(.bold)
                             .lineLimit(2)
                             .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
                         
                         Text(event.location)
                             .font(.caption)

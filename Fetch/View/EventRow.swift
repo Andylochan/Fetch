@@ -31,7 +31,7 @@ struct EventRow: View {
                             .font(.caption)
                             .foregroundColor(.gray)
                         
-                        Text(event.dateTime)
+                        Text(homeData.formatDate(date: event.dateTime))
                             .font(.caption)
                             .foregroundColor(.gray)
                             .lineLimit(2)
