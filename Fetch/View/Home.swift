@@ -11,23 +11,13 @@ struct Home: View {
     @StateObject var homeData = HomeViewModel()
     
     var body: some View {
-        TabView {
-            //Event Tab
-            EventsView()
-                .tabItem {
-                    Image(systemName: "person.3.fill")
-                    Text("Events")
-                }
-                //Setting environmentObject so that we can access data in EventsView
-                .environmentObject(homeData)
-
-            //Favorite Tab
-            Text("Favorites")
-                .tabItem {
-                    Image(systemName: "heart.fill")
-                    Text("Favorites")
-                }
-        }
+        EventsView()
+            .tabItem {
+                Image(systemName: "person.3.fill")
+                Text("Events")
+            }
+            //Setting environmentObject so that we can access data in EventsView
+            .environmentObject(homeData)
     }
 }
 

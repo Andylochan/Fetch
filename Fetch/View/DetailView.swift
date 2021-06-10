@@ -9,7 +9,7 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct DetailView: View {
-    
+    @ObservedObject var favorites = Favorites()
     var event: Event 
     
     var body: some View {
@@ -44,15 +44,19 @@ struct DetailView: View {
                     
                     Spacer()
                     
-                    //Upon Button Press, Toggle/Add Event.ID to a persistent data store
-                    Button(action: {}, label: {
-                        Image(systemName: "heart.fill")
+                    //Upon Button Press, Toggle/Add Event.ID to Favorites
+                    Button(action: {
+                        if self.favorites.contains(event) {
+                            self.favorites.remove(event)
+                        } else {
+                            self.favorites.add(event)
+                        }
+                    }, label: {
+                        Image(systemName: favorites.contains(event) ? "heart.fill" : "heart")
                             .resizable()
                             .padding(15)
-                            .frame(width: 50, height: 50)
-                            .foregroundColor(.white)
-                            .background(Color.gray.opacity(0.75))
-                            .cornerRadius(45)
+                            .frame(width: 75, height: 70)
+                            .foregroundColor(favorites.contains(event) ? .red : Color.gray.opacity(0.5))
                     })
                 }
                 .padding()
