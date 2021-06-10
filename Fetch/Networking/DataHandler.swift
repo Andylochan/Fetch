@@ -13,7 +13,7 @@ class DataHandler {
     
     func fetchEvents(with queryParameter: String, closure: @escaping (Bool?, [Event]?) -> Void) {
         
-        let url = "https://api.seatgeek.com/2/events?q=\(queryParameter)&client_id=\(clientID)&client_secret=\(clientSecret)"
+        let url = "https://api.seatgeek.com/2/events?q=\(queryParameter)&client_id=\(clientID)"
         var events = [Event]()
         
         Alamofire.request(url, method: .get).responseJSON { response in
@@ -44,6 +44,22 @@ class DataHandler {
                 }
                 closure(true, events)
             }
+        }
+    }
+}
+
+// MARK:-  ClientID
+extension DataHandler {
+    private var clientID: String {
+        get {
+            guard let filePath = Bundle.main.path(forResource: "Creds", ofType: "plist") else {
+                fatalError("Couldn't find the file 'Creds.plist'.")
+            }
+            let plist = NSDictionary(contentsOfFile: filePath)
+            guard let value = plist?.object(forKey: "clientID") as? String else {
+                fatalError("Couldn't find 'ClientID' in 'Creds.plist'.")
+            }
+            return value
         }
     }
 }

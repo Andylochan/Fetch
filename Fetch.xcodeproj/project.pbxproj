@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14387A032671526D00E9A3B1 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14387A022671526D00E9A3B1 /* Keys.swift */; };
 		14387A0C267153D100E9A3B1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14387A0B267153D100E9A3B1 /* Home.swift */; };
 		14387A10267155CC00E9A3B1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14387A0F267155CC00E9A3B1 /* HomeViewModel.swift */; };
 		14387A132671565300E9A3B1 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14387A122671565300E9A3B1 /* EventsView.swift */; };
@@ -20,11 +19,11 @@
 		144512F0267151300082900A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 144512EF267151300082900A /* Preview Assets.xcassets */; };
 		14B9CF6E2671A18A00C6ADD1 /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9CF6D2671A18A00C6ADD1 /* EventRow.swift */; };
 		14B9CF8C26729D7400C6ADD1 /* HVM + DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9CF8B26729D7400C6ADD1 /* HVM + DateFormat.swift */; };
+		14B9CF962672B71100C6ADD1 /* Creds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14B9CF952672B71100C6ADD1 /* Creds.plist */; };
 		7DF686AEA6FFF7A91251E78D /* Pods_Fetch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0C4A88795F88F3BA9D3099 /* Pods_Fetch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		14387A022671526D00E9A3B1 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		14387A0B267153D100E9A3B1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		14387A0F267155CC00E9A3B1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		14387A122671565300E9A3B1 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
@@ -39,6 +38,7 @@
 		144512F1267151300082900A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14B9CF6D2671A18A00C6ADD1 /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
 		14B9CF8B26729D7400C6ADD1 /* HVM + DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HVM + DateFormat.swift"; sourceTree = "<group>"; };
+		14B9CF952672B71100C6ADD1 /* Creds.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Creds.plist; sourceTree = "<group>"; };
 		171B358AA442BB77E1114620 /* Pods-Fetch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fetch.debug.xcconfig"; path = "Target Support Files/Pods-Fetch/Pods-Fetch.debug.xcconfig"; sourceTree = "<group>"; };
 		2B0C4A88795F88F3BA9D3099 /* Pods_Fetch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fetch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CC633E956DD2EB7DB65770 /* Pods-Fetch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fetch.release.xcconfig"; path = "Target Support Files/Pods-Fetch/Pods-Fetch.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,9 +127,9 @@
 				14B9CF7E267290A100C6ADD1 /* Extensions */,
 				144512E8267151300082900A /* FetchApp.swift */,
 				144512EA267151300082900A /* ContentView.swift */,
-				14387A022671526D00E9A3B1 /* Keys.swift */,
 				144512EC267151300082900A /* Assets.xcassets */,
 				144512F1267151300082900A /* Info.plist */,
+				14B9CF952672B71100C6ADD1 /* Creds.plist */,
 				144512EE267151300082900A /* Preview Content */,
 			);
 			path = Fetch;
@@ -219,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B9CF962672B71100C6ADD1 /* Creds.plist in Resources */,
 				144512F0267151300082900A /* Preview Assets.xcassets in Resources */,
 				144512ED267151300082900A /* Assets.xcassets in Resources */,
 			);
@@ -274,7 +275,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				144512EB267151300082900A /* ContentView.swift in Sources */,
-				14387A032671526D00E9A3B1 /* Keys.swift in Sources */,
 				14387A0C267153D100E9A3B1 /* Home.swift in Sources */,
 				14387A2D26719FA700E9A3B1 /* DetailView.swift in Sources */,
 				14387A10267155CC00E9A3B1 /* HomeViewModel.swift in Sources */,
