@@ -19,7 +19,7 @@ Please open and run the ```Fetch.xcworkspace``` file to view the project.
 
 ## App Screenshots
 
-<img src="imgs/ss1.png" width="270" height="480">
+<img src="imgs/ss1.png" width="50%" height="50%">
 <img src="imgs/ss2.png" width="270" height="480">
 <img src="imgs/ss3.png" width="270" height="480">
 
