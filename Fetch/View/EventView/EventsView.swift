@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct EventsView: View {
     @EnvironmentObject var homeData: HomeViewModel
@@ -21,6 +22,8 @@ struct EventsView: View {
                             .foregroundColor(.gray)
                         
                         TextField("Search Events", text: $homeData.searchQuery)
+                            .autocapitalization(.none)
+                            .disableAutocorrection(true)
                     }
                     .padding(.vertical, 10)
                     .padding(.horizontal)
@@ -38,8 +41,7 @@ struct EventsView: View {
                     else {
                         //Display Results
                         ForEach(events) { data in
-                            Text(data.title)
-                            Text(String(data.id))
+                            EventRowView(event: data)
                         }
                     }
                 }

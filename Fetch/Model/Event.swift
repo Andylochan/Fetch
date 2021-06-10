@@ -10,7 +10,7 @@ import SwiftUI
 struct Event: Identifiable {
     var id: Int
     var title: String
-//    var dateTime: String
-//    var city: String
-//    var imageURL: String
+    var dateTime: String
+    var location: String
+    var imageURL: String 
 }
