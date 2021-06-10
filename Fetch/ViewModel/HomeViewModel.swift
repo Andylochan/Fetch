@@ -31,7 +31,7 @@ class HomeViewModel: ObservableObject {
             })
     }
 
-    func searchEvents() {
+    private func searchEvents() {
         let originalQuery = searchQuery.replacingOccurrences(of: " ", with: "+")
         
         DataHandler.shared.fetchEvents(with: originalQuery) { [unowned self] (result, events) in

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Home: View {
     @StateObject var homeData = HomeViewModel()
+    @StateObject var favorites = Favorites()
     
     var body: some View {
         EventsView()

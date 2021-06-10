@@ -13,7 +13,6 @@
 		14387A132671565300E9A3B1 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14387A122671565300E9A3B1 /* EventsView.swift */; };
 		14387A1626715D7300E9A3B1 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14387A1526715D7300E9A3B1 /* Event.swift */; };
 		14387A1A267176DC00E9A3B1 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14387A19267176DC00E9A3B1 /* DataHandler.swift */; };
-		14387A2A267198CB00E9A3B1 /* JUNK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14387A29267198CB00E9A3B1 /* JUNK.swift */; };
 		14387A2D26719FA700E9A3B1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14387A2C26719FA700E9A3B1 /* DetailView.swift */; };
 		144512E9267151300082900A /* FetchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144512E8267151300082900A /* FetchApp.swift */; };
 		144512EB267151300082900A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144512EA267151300082900A /* ContentView.swift */; };
@@ -31,7 +30,6 @@
 		14387A122671565300E9A3B1 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		14387A1526715D7300E9A3B1 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		14387A19267176DC00E9A3B1 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
-		14387A29267198CB00E9A3B1 /* JUNK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JUNK.swift; sourceTree = "<group>"; };
 		14387A2C26719FA700E9A3B1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		144512E5267151300082900A /* Fetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fetch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		144512E8267151300082900A /* FetchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchApp.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				14387A19267176DC00E9A3B1 /* DataHandler.swift */,
-				14387A29267198CB00E9A3B1 /* JUNK.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -130,10 +127,10 @@
 				14387A18267176B000E9A3B1 /* Networking */,
 				144512E8267151300082900A /* FetchApp.swift */,
 				144512EA267151300082900A /* ContentView.swift */,
+				14387A022671526D00E9A3B1 /* Keys.swift */,
 				144512EC267151300082900A /* Assets.xcassets */,
 				144512F1267151300082900A /* Info.plist */,
 				144512EE267151300082900A /* Preview Content */,
-				14387A022671526D00E9A3B1 /* Keys.swift */,
 			);
 			path = Fetch;
 			sourceTree = "<group>";
@@ -273,7 +270,6 @@
 				14387A0C267153D100E9A3B1 /* Home.swift in Sources */,
 				14387A2D26719FA700E9A3B1 /* DetailView.swift in Sources */,
 				14387A10267155CC00E9A3B1 /* HomeViewModel.swift in Sources */,
-				14387A2A267198CB00E9A3B1 /* JUNK.swift in Sources */,
 				14387A1A267176DC00E9A3B1 /* DataHandler.swift in Sources */,
 				14B9CF6E2671A18A00C6ADD1 /* EventRow.swift in Sources */,
 				144512E9267151300082900A /* FetchApp.swift in Sources */,

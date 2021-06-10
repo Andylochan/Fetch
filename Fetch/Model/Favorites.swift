@@ -14,7 +14,7 @@ class Favorites: ObservableObject {
     
     init() {
         let decoder = JSONDecoder()
-        if let data = defaults.value(forKey: "Favorites") as? Data {
+        if let data = defaults.data(forKey: "Favorites") {
             let eventData = try? decoder.decode(Set<Int>.self, from: data)
             self.events = eventData ?? []
         } else {
