@@ -11,11 +11,21 @@ import Combine
 class HomeViewModel: ObservableObject {
     @Published var searchQuery = ""
     @Published var fetchedEvents: [Event]? = nil
-
-    //Cancel search publisher when needed
+    @Published var events: Set<Int>
+    
+    let defaults = UserDefaults.standard
     var searchCancellable: AnyCancellable? = nil
     
     init() {
+        //Favorites data store
+        let decoder = JSONDecoder()
+        if let data = defaults.data(forKey: "Favorites") {
+            let eventData = try? decoder.decode(Set<Int>.self, from: data)
+            self.events = eventData ?? []
+        } else {
+            self.events = []
+        }
+        
         //Wait 0.6 sec after user is done typing, then fetch
         searchCancellable = $searchQuery
             .removeDuplicates()
@@ -31,7 +41,7 @@ class HomeViewModel: ObservableObject {
             })
     }
 
-    private func searchEvents() {
+    func searchEvents() {
         let originalQuery = searchQuery.replacingOccurrences(of: " ", with: "+")
         
         DataHandler.shared.fetchEvents(with: originalQuery) { [unowned self] (result, events) in
@@ -39,6 +49,40 @@ class HomeViewModel: ObservableObject {
                 self.fetchedEvents = events
                 print(res ? "Fetch Success" : "Fetch Error")
             }
+        }
+    }
+}
+
+// MARK:-  Favorites Methods
+extension HomeViewModel {
+    func getEventIds() -> Set<Int> {
+        return self.events
+    }
+    
+    func isEmpty() -> Bool {
+        events.count < 1
+    }
+    
+    func contains(_ event: Event) -> Bool {
+        events.contains(event.id)
+    }
+    
+    func add(_ event: Event) {
+        objectWillChange.send()
+        events.insert(event.id)
+        save()
+    }
+    
+    func remove(_ event: Event) {
+        objectWillChange.send()
+        events.remove(event.id)
+        save()
+    }
+    
+    func save() {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(events) {
+            defaults.set(encoded, forKey: "Favorites")
         }
     }
 }

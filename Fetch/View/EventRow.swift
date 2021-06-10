@@ -9,7 +9,7 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct EventRow: View {
-    @ObservedObject var favorites = Favorites()
+    @EnvironmentObject var homeData: HomeViewModel
     var event: Event
 
     var body: some View {
@@ -46,11 +46,11 @@ struct EventRow: View {
                     
                     Spacer(minLength: 0)
                     
-                    Image(systemName: favorites.contains(event) ? "heart.fill" : "heart")
+                    Image(systemName: homeData.contains(event) ? "heart.fill" : "heart")
                         .resizable()
                         .padding(10)
                         .frame(width: 40, height: 40)
-                        .foregroundColor(favorites.contains(event) ? .red : Color.white.opacity(0.0))
+                        .foregroundColor(homeData.contains(event) ? .red : Color.white.opacity(0.0))
                         .background(Color.white)
                         .cornerRadius(45)
                 })
