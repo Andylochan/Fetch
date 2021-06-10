@@ -16,9 +16,9 @@ class HomeViewModel: ObservableObject {
     var searchCancellable: AnyCancellable? = nil
     
     init() {
+        //Wait 0.6 sec after user is done typing, then fetch
         searchCancellable = $searchQuery
             .removeDuplicates()
-            //Wait 0.6 sec after user is done typing, then fetch
             .debounce(for: 0.6, scheduler: RunLoop.main)
             .sink(receiveValue: { str in
                 if str == "" {
@@ -41,5 +41,4 @@ class HomeViewModel: ObservableObject {
             }
         }
     }
-    
 }

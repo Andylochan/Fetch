@@ -11,7 +11,6 @@ struct EventsView: View {
     @EnvironmentObject var homeData: HomeViewModel
     
     var body: some View {
-    
         NavigationView {
             ScrollView(.vertical, showsIndicators: false, content: {
                 VStack(spacing: 15) {

@@ -79,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				14387A1526715D7300E9A3B1 /* Event.swift */,
-				14B9CF752671C9E300C6ADD1 /* Favorites.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -125,6 +124,7 @@
 				14387A092671533600E9A3B1 /* Model */,
 				14387A082671533100E9A3B1 /* View */,
 				14387A18267176B000E9A3B1 /* Networking */,
+				14B9CF7B26727EF300C6ADD1 /* Data */,
 				144512E8267151300082900A /* FetchApp.swift */,
 				144512EA267151300082900A /* ContentView.swift */,
 				14387A022671526D00E9A3B1 /* Keys.swift */,
@@ -141,6 +141,14 @@
 				144512EF267151300082900A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		14B9CF7B26727EF300C6ADD1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				14B9CF752671C9E300C6ADD1 /* Favorites.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		B148A7985AD0609C186F8C33 /* Pods */ = {

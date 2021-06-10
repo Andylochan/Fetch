@@ -5,8 +5,6 @@
 //  Created by Andy Lochan on 6/9/21.
 //
 
-import SwiftUI
-
 struct Event: Identifiable {
     var id: Int
     var title: String

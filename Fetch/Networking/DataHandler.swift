@@ -23,6 +23,7 @@ class DataHandler {
             }
             
             if let data = response.data, let json = try? JSON(data: data) {
+                //Parse data into a [Event] array
                 let container = json["events"]
                 let eventsArray = container.array ?? []
 

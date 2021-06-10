@@ -8,8 +8,7 @@
 import SwiftUI
 
 class Favorites: ObservableObject {
-    
-    private var events: Set<Int>
+    @Published var events: Set<Int>
     let defaults = UserDefaults.standard
     
     init() {

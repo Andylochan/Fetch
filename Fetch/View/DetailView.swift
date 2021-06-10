@@ -13,7 +13,6 @@ struct DetailView: View {
     var event: Event 
     
     var body: some View {
-        
         ScrollView {
             VStack(alignment: .center, spacing: 8, content: {
                 Text(event.title)
@@ -44,12 +43,12 @@ struct DetailView: View {
                     
                     Spacer()
                     
-                    //Upon Button Press, Toggle/Add Event.ID to Favorites
+                    //Upon button press, toggle/add event.ID to favorites
                     Button(action: {
-                        if self.favorites.contains(event) {
-                            self.favorites.remove(event)
+                        if favorites.contains(event) {
+                            favorites.remove(event)
                         } else {
-                            self.favorites.add(event)
+                            favorites.add(event)
                         }
                     }, label: {
                         Image(systemName: favorites.contains(event) ? "heart.fill" : "heart")
@@ -65,10 +64,3 @@ struct DetailView: View {
         }
     }
 }
-
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView(event: Event(id: 999, title: "Title", dateTime: "Date/Time", location: "LocationTxt", imageURL: "https://seatgeek.com/images/performers-landscape/new-york-city-fc-42b38e/297993/huge.jpg"))
-    }
-}
-
