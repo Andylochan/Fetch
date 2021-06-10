@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 
 struct EventsView: View {
     @EnvironmentObject var homeData: HomeViewModel
@@ -41,7 +40,7 @@ struct EventsView: View {
                     else {
                         //Display Results
                         ForEach(events) { data in
-                            EventRowView(event: data)
+                            EventRow(event: data)
                         }
                     }
                 }

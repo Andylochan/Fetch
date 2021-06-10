@@ -1,19 +1,19 @@
 //
-//  EventRowView.swift
+//  EventRow.swift
 //  Fetch
 //
 //  Created by Andy Lochan on 6/9/21.
 //
 
 import SwiftUI
+
+import SwiftUI
 import SDWebImageSwiftUI
 
-struct EventRowView: View {
-
+struct EventRow: View {
     var event: Event
 
     var body: some View {
-
         HStack(alignment: .top, spacing: 15) {
             WebImage(url: extractImage())
                 .resizable()
@@ -26,18 +26,28 @@ struct EventRowView: View {
                     .font(.title3)
                     .fontWeight(.bold)
                 
+                Text(event.location)
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                
                 Text(event.dateTime)
                     .font(.caption)
                     .foregroundColor(.gray)
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
+                
+                NavigationLink(
+                    destination: DetailView(event: event),
+                    label: {
+                        Text("Details")
+                    })
             })
             Spacer(minLength: 0)
         }
         .padding(.horizontal)
     }
 
-    func extractImage() -> URL {
+    private func extractImage() -> URL {
         return URL(string: event.imageURL)!
     }
 }
