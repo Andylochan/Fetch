@@ -1,4 +1,4 @@
-# Fetch (FetchRewards)
+# Fetch
 
 A SwiftUI app that displays events from the SeatGeek API (https://platform.seatgeek.com/)
 
